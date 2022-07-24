@@ -8,7 +8,7 @@ import { InputDialog, MediaData, TextData } from './components/dialog/dialog.js'
 import { MediaSectionInput } from './components/input/media-input.js';
 import { TextSectionInput } from './components/input/text-input.js';
 
-type InputComponentConstructor<T = (MediaData | TextData) & Component> = {
+type InputComponentConstructor<T extends (MediaData | TextData) & Component> = {
   new (): T
 }
 
